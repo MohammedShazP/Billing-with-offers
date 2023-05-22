@@ -52,11 +52,14 @@ def flat_10_discount(q_list, p_list):
     if total_amount > 200:
         after_discount_total = total_amount - discount_price
         discountable_price.append(discount_price)
+        discount_name = "Flat 10 Discount"
     else:
         after_discount_total = total_amount
+        discountable_price.append(0)
+        discount_name = "No Discount Applicable"
     final_price1 = int(after_discount_total)
     total_after_discount.append(final_price1)
-    name_and_amount[final_price1] = 'Flat 10 Discount'
+    name_and_amount[final_price1] = discount_name
 
 
 # function for bulk 5 discount
